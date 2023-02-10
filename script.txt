@@ -1,0 +1,23 @@
+info
+show
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+insert -r
+info
+show
