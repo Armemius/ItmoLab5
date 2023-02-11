@@ -3,9 +3,11 @@ package com.armemius.lab5.collection;
 import com.armemius.lab5.collection.data.Person;
 import com.armemius.lab5.collection.data.StudyGroup;
 import com.armemius.lab5.collection.exceptions.CollectionFileException;
+import com.armemius.lab5.collection.exceptions.CollectionRuntimeException;
 import com.armemius.lab5.commands.exceptions.CommandArgumentException;
 import com.armemius.lab5.commands.exceptions.CommandRuntimeException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -97,7 +99,17 @@ public class CollectionManager {
     public static void load() {
         try {
             storage = mapper.readValue(new File(path), new TypeReference<>() {});
-        } catch (IOException e) {
+            for (var it : storage.entrySet()) {
+                if (it.getKey() != it.getValue().getId())
+                    throw new CollectionRuntimeException("Broken data");
+            }
+        }
+        catch (CollectionRuntimeException | DatabindException e) {
+            System.out.println("'" + path + "' contains broken data");
+            storage.clear();
+            StudyGroup.getUsedIds().clear();
+        }
+        catch (IOException e) {
             System.out.println("Unable to load '" + path + "' file with data\n" + e.getMessage());
         }
     }
@@ -150,6 +162,7 @@ public class CollectionManager {
      */
     public static void clear() {
         storage.clear();
+        StudyGroup.getUsedIds().clear();
     }
 
     /**
@@ -164,6 +177,7 @@ public class CollectionManager {
         for (var it : getAll()) {
             if (comparator.test(it)) {
                 storage.remove(it.getId());
+                StudyGroup.getUsedIds().remove(it.getId());
                 removals++;
             }
         }
@@ -199,6 +213,7 @@ public class CollectionManager {
         for (var it : getAll()) {
             if (it.getGroupAdmin().equals(admin)) {
                 storage.remove(it.getId());
+                StudyGroup.getUsedIds().remove(it.getId());
                 return true;
             }
         }

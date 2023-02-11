@@ -4,6 +4,7 @@ package com.armemius.lab5.commands.nodes;
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandArgumentException;
 import com.armemius.lab5.commands.exceptions.CommandBuildException;
+import com.armemius.lab5.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,17 +103,5 @@ public abstract class Node {
             it.paramsHandler(paramsChecker);
         }
         return this;
-    }
-
-    /**
-     * Represents the execution task for command
-     */
-    @FunctionalInterface
-    public interface Task {
-        /**
-         * Method that executes the command
-         * @param context {@link CommandContext} for command
-         */
-        void execute(CommandContext context);
     }
 }

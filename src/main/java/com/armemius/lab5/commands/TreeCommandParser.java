@@ -119,7 +119,7 @@ public class TreeCommandParser implements CommandParser {
             }
             if (lastNode == null)
                 throw new CommandNotFoundException("Empty command provided");
-            if (!lastNode.run(new CommandContext(raw, args, params, this.inputHandler, this.outputHandler)))
+            if (!lastNode.run(new CommandContext(raw, args, params, this.inputHandler, this.outputHandler, this)))
                 throw new CommandRuntimeException("Incomplete or incorrect command");
         }
         catch (CommandNotFoundException ex) {

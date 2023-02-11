@@ -2,14 +2,21 @@ package com.armemius.lab5.collection.data;
 
 import com.armemius.lab5.collection.exceptions.CollectionRuntimeException;
 
+import java.time.format.DateTimeFormatter;
+import java.util.Set;
+import java.util.TreeSet;
+
 @SuppressWarnings("unused")
 public class StudyGroup {
     public StudyGroup() {}
 
+    private static Set<Integer> usedIds = new TreeSet<>();
+
     public StudyGroup(Integer id, String name, Coordinates coordinates, long studentsCount, int expelledStudents, double averageMark, Semester semesterEnum, Person groupAdmin) {
         creationDate = java.time.ZonedDateTime.now();
-        if (id == null || id <= 0)
+        if (id == null || id <= 0 || usedIds.contains(id))
             throw new CollectionRuntimeException("Incorrect parameters for StudyGroup");
+        usedIds.add(id);
         this.id = id;
         if (name == null || name.isEmpty())
             throw new CollectionRuntimeException("Incorrect parameters for StudyGroup");
@@ -42,13 +49,18 @@ public class StudyGroup {
     private Semester semesterEnum; //Поле может быть null
     private Person groupAdmin; //Поле не может быть null
 
+    public static Set<Integer> getUsedIds() {
+        return usedIds;
+    }
+
     public Integer getId() {
-        if (id == null || id <= 0)
-            throw new CollectionRuntimeException("Incorrect parameters for StudyGroup");
         return id;
     }
 
     public void setId(Integer id) {
+        if (id == null || id <= 0 || usedIds.contains(id))
+            throw new CollectionRuntimeException("Incorrect parameters for StudyGroup");
+        usedIds.add(id);
         this.id = id;
     }
 
@@ -134,7 +146,7 @@ public class StudyGroup {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", coordinates=" + coordinates +
-                ", creationDate=" + creationDate +
+                ", creationDate=" + creationDate.format(DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy")) +
                 ", studentsCount=" + studentsCount +
                 ", expelledStudents=" + expelledStudents +
                 ", averageMark=" + averageMark +

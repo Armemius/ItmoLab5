@@ -15,11 +15,13 @@ import java.util.Set;
  * @param params Parameters for command
  * @param inputHandler {@link InputHandler} from {@link CommandParser}
  * @param outputHandler {@link OutputHandler} from {@link CommandParser}
+ * @param parser Parser for command
  */
 public record CommandContext(
         String rawCommand,
         List<String> args,
         Set<String> params,
         InputHandler inputHandler,
-        OutputHandler outputHandler
+        OutputHandler outputHandler,
+        CommandParser parser
 ) {}
