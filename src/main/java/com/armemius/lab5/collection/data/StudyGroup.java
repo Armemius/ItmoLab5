@@ -3,6 +3,7 @@ package com.armemius.lab5.collection.data;
 import com.armemius.lab5.collection.exceptions.CollectionRuntimeException;
 
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -153,5 +154,36 @@ public class StudyGroup {
                 ", semesterEnum=" + semesterEnum +
                 ", groupAdmin=" + groupAdmin +
                 ')';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null)
+            return false;
+        if (!(o instanceof StudyGroup group))
+            return false;
+        return studentsCount == group.studentsCount
+                && expelledStudents == group.expelledStudents
+                && Double.compare(group.averageMark, averageMark) == 0
+                && id.equals(group.id) && name.equals(group.name)
+                && coordinates.equals(group.coordinates)
+                && creationDate.equals(group.creationDate)
+                && semesterEnum == group.semesterEnum
+                && groupAdmin.equals(group.groupAdmin);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id,
+                name,
+                coordinates,
+                creationDate,
+                studentsCount,
+                expelledStudents,
+                averageMark,
+                semesterEnum,
+                groupAdmin);
     }
 }

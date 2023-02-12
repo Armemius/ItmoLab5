@@ -2,6 +2,8 @@ package com.armemius.lab5.collection.data;
 
 import com.armemius.lab5.collection.exceptions.CollectionRuntimeException;
 
+import java.util.Objects;
+
 @SuppressWarnings("unused")
 public class Coordinates {
     public Coordinates() {}
@@ -39,5 +41,21 @@ public class Coordinates {
     public String toString() {
         return "Coordinates(x: " + x
                 + ", y: " + y + ")";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null)
+            return false;
+        if (!(o instanceof Coordinates that))
+            return false;
+        return x == that.x && y.equals(that.y);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
     }
 }

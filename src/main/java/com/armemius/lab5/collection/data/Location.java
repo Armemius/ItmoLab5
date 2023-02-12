@@ -2,6 +2,8 @@ package com.armemius.lab5.collection.data;
 
 import com.armemius.lab5.collection.exceptions.CollectionRuntimeException;
 
+import java.util.Objects;
+
 @SuppressWarnings("unused")
 public class Location {
     public Location() {}
@@ -57,5 +59,21 @@ public class Location {
         return "Location(x: " + x
                 + ", y: " + y
                 + ", z: " + z + ")";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null)
+            return false;
+        if (!(o instanceof Location location))
+            return false;
+        return x == location.x && y.equals(location.y) && z.equals(location.z);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y, z);
     }
 }

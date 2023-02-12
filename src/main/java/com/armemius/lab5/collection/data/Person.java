@@ -3,6 +3,8 @@ package com.armemius.lab5.collection.data;
 
 import com.armemius.lab5.collection.exceptions.CollectionRuntimeException;
 
+import java.util.Objects;
+
 @SuppressWarnings("unused")
 public class Person {
     public Person() {}
@@ -109,5 +111,22 @@ public class Person {
                 + ", hairColor: " + hairColor
                 + ", nationality:" + nationality
                 + ", location:" + location + ")";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null)
+            return false;
+        if (!(o instanceof Person))
+            return false;
+        Person person = (Person) o;
+        return Float.compare(person.height, height) == 0 && name.equals(person.name) && eyeColor == person.eyeColor && hairColor == person.hairColor && nationality == person.nationality && location.equals(person.location);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, height, eyeColor, hairColor, nationality, location);
     }
 }

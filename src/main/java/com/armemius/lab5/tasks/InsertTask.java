@@ -31,47 +31,7 @@ public class InsertTask extends RequestTask {
         }
         if (context.params().contains("r")) {
             outputHandler.put("Inserting random element");
-            CollectionManager.add(new StudyGroup(CollectionManager.genId(),
-                    "GROUP_NAME" + (int)(Math.random() * 1000),
-                    new Coordinates((int)(Math.random() * 200000 - 100000), (long)(Math.random() * 10215 - 215)),
-                    (long)(Math.random() * 20 + 10),
-                    (int)(Math.random() * 5 + 1),
-                    Math.random() * 3 + 2,
-                    switch ((int)(Math.random() * 5)) {
-                        case 0 -> Semester.SECOND;
-                        case 1 -> Semester.THIRD;
-                        case 2 -> Semester.SEVENTH;
-                        case 3 -> Semester.EIGHTH;
-                        default -> null;
-                    },
-                    new Person(
-                            "ADMIN_NAME" + (int)(Math.random() * 1000),
-                            (float)(Math.random() * 50 + 150),
-                            switch ((int)(Math.random() * 3)) {
-                                case 0 -> EyeColor.GREEN;
-                                case 1 -> EyeColor.WHITE;
-                                default -> EyeColor.YELLOW;
-                            },
-                            switch ((int)(Math.random() * 5)) {
-                                case 0 -> HairColor.BLACK;
-                                case 1 -> HairColor.GREEN;
-                                case 2 -> HairColor.ORANGE;
-                                case 3 -> HairColor.RED;
-                                default -> HairColor.WHITE;
-                            },
-                            switch ((int)(Math.random() * 4)) {
-                                case 0 -> Country.CHINA;
-                                case 1 -> Country.SOUTH_KOREA;
-                                case 2 -> Country.UNITED_KINGDOM;
-                                default -> Country.VATICAN;
-                            },
-                            new Location(
-                                    (long)(Math.random() * 200000 - 10000),
-                                    Math.random() * 200000 - 10000,
-                                    (long)(Math.random() * 200000 - 10000)
-                            )
-                    )
-            ));
+            CollectionManager.add(genRandomGroup());
             return;
         }
         outputHandler.put("Inserting new element");
@@ -85,5 +45,49 @@ public class InsertTask extends RequestTask {
                 group = null;
         }
         CollectionManager.add(group);
+    }
+
+    protected StudyGroup genRandomGroup() {
+        return new StudyGroup(CollectionManager.genId(),
+                "GROUP_NAME" + (int)(Math.random() * 1000),
+                new Coordinates((int)(Math.random() * 200000 - 100000), (long)(Math.random() * 10215 - 215)),
+                (long)(Math.random() * 20 + 10),
+                (int)(Math.random() * 5 + 1),
+                Math.random() * 3 + 2,
+                switch ((int)(Math.random() * 5)) {
+                    case 0 -> Semester.SECOND;
+                    case 1 -> Semester.THIRD;
+                    case 2 -> Semester.SEVENTH;
+                    case 3 -> Semester.EIGHTH;
+                    default -> null;
+                },
+                new Person(
+                        "ADMIN_NAME" + (int)(Math.random() * 1000),
+                        (float)(Math.random() * 50 + 150),
+                        switch ((int)(Math.random() * 3)) {
+                            case 0 -> EyeColor.GREEN;
+                            case 1 -> EyeColor.WHITE;
+                            default -> EyeColor.YELLOW;
+                        },
+                        switch ((int)(Math.random() * 5)) {
+                            case 0 -> HairColor.BLACK;
+                            case 1 -> HairColor.GREEN;
+                            case 2 -> HairColor.ORANGE;
+                            case 3 -> HairColor.RED;
+                            default -> HairColor.WHITE;
+                        },
+                        switch ((int)(Math.random() * 4)) {
+                            case 0 -> Country.CHINA;
+                            case 1 -> Country.SOUTH_KOREA;
+                            case 2 -> Country.UNITED_KINGDOM;
+                            default -> Country.VATICAN;
+                        },
+                        new Location(
+                                (long)(Math.random() * 200000 - 10000),
+                                Math.random() * 200000 - 10000,
+                                (long)(Math.random() * 200000 - 10000)
+                        )
+                )
+        );
     }
 }

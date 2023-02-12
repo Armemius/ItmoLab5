@@ -54,6 +54,7 @@ public class ParserRegistry {
         var saveTask = new SaveTask();
         var showTask = new ShowTask();
         var updateTask = new UpdateTask();
+        var fillTask = new FillTask();
         parser.add(
                 new CommandNode("help")
                         .executes(helpTask)
@@ -149,6 +150,13 @@ public class ParserRegistry {
         ).add(
                 new CommandNode("getenv")
                         .executes(getEnvTask)
+                        .paramsHandler(helpParameters)
+        ).add(
+                new CommandNode("fill")
+                        .then(
+                                new DataNode().executes(fillTask)
+                        )
+                        .executes(fillTask)
                         .paramsHandler(helpParameters)
         );
     }
