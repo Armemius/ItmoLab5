@@ -16,6 +16,10 @@ public class ScannerInputHandler implements InputHandler {
      */
     @Override
     public String get() {
+        if (!scanner.hasNextLine()) {
+            this.close();
+            System.exit(0);
+        }
         return scanner.nextLine();
     }
 
