@@ -4,12 +4,13 @@ package com.armemius.lab5.commands.nodes;
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandArgumentException;
 import com.armemius.lab5.commands.exceptions.CommandBuildException;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.tasks.Task;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Consumer;
 
 /**
  * <b>Node</b> class represents possible path
@@ -19,8 +20,6 @@ public abstract class Node {
     private final String content;
     private final List<Node> children = new ArrayList<>();
     private Task task;
-
-    private Consumer<Set<String>> paramsChecker = null;
 
     /**
      * Constructor for <b>Node</b> requires <i>String</i>
@@ -57,10 +56,49 @@ public abstract class Node {
         if (task == null) {
             return false;
         }
-        if (paramsChecker != null)
-            paramsChecker.accept(context.params());
-        else if (!context.params().isEmpty())
+        var taskClass = task.getClass();
+        var annotation = taskClass.getAnnotation(Parametrized.class);
+        if (annotation != null) {
+            var raw = context.params();
+            Set<String> baked = new HashSet<>();
+            for (var it : annotation.params()) {
+                if (raw.contains(it.letter())) {
+                    if (raw.contains(it.name())) {
+                        throw new CommandArgumentException("Duplicate parameters met");
+                    } else {
+                        if (baked.contains(it.letter())) {
+                            throw new CommandArgumentException("Duplicate parameters met");
+                        }
+                        baked.add(it.letter());
+                        raw.remove(it.letter());
+                    }
+                } else if (raw.contains(it.name())) {
+                    if (baked.contains(it.letter())) {
+                        throw new CommandArgumentException("Duplicate parameters met");
+                    }
+                    baked.add(it.letter());
+                    raw.remove(it.name());
+                }
+            }
+            if (!raw.isEmpty()) {
+                throw new CommandArgumentException("Unknown parameter options");
+            }
+            for (var it : annotation.incompatible()) {
+                int counter = 0;
+                for (var jt : it.value()) {
+                    if (baked.contains(jt)) {
+                        counter++;
+                    }
+                }
+                if (counter > 1) {
+                    throw new CommandArgumentException("Incompatible parameters met");
+                }
+            }
+            raw.addAll(baked);
+        } else if (!context.params().isEmpty()) {
             throw new CommandArgumentException("Command doesn't have parameters");
+        }
+
         task.execute(context);
         return true;
     }
@@ -87,21 +125,6 @@ public abstract class Node {
      */
     public Node executes(Task task) {
         this.task = task;
-        return this;
-    }
-
-    /**
-     * Receives <i>Consumer</i> as a parameter, that throws an exception
-     * if parameters are incorrect
-     * @see com.armemius.lab5.ConsoleManager.Actions#paramsChecker(ArrayList, ArrayList[]) 
-     * @param paramsChecker Consumer that checks parameters of command
-     * @return Pointer to the current node for chaining
-     */
-    public Node paramsHandler(Consumer<Set<String>> paramsChecker) {
-        this.paramsChecker = paramsChecker;
-        for (var it : children) {
-            it.paramsHandler(paramsChecker);
-        }
         return this;
     }
 }

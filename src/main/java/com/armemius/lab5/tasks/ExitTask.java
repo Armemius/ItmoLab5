@@ -5,10 +5,19 @@ import com.armemius.lab5.collection.CollectionManager;
 import com.armemius.lab5.collection.exceptions.CollectionFileException;
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandRuntimeException;
+import com.armemius.lab5.commands.params.Param;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.InputHandler;
 import com.armemius.lab5.io.OutputHandler;
 import com.armemius.lab5.tasks.InputTask;
 
+@Parametrized(
+        params = {
+                @Param(letter = "h", name = "help"),
+                @Param(letter = "f", name = "force"),
+                @Param(letter = "s", name = "save")
+        }
+)
 public class ExitTask extends InputTask {
     /**
      * Action for <b>exit</b> command

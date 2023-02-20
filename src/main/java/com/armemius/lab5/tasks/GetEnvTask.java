@@ -1,16 +1,19 @@
 package com.armemius.lab5.tasks;
 
 import com.armemius.lab5.commands.CommandContext;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.InputHandler;
 import com.armemius.lab5.io.OutputHandler;
 import com.armemius.lab5.tasks.Task;
 
+@Parametrized
 public class GetEnvTask implements Task {
     /**
      * Action for <b>getenv</b> command
      * Doesn't receive arguments
      * @param context
      */
+    @Override
     public void execute (CommandContext context) {
         OutputHandler outputHandler = context.outputHandler();
         InputHandler inputHandler = context.inputHandler();

@@ -2,16 +2,25 @@ package com.armemius.lab5.tasks;
 
 import com.armemius.lab5.collection.CollectionManager;
 import com.armemius.lab5.commands.CommandContext;
+import com.armemius.lab5.commands.params.Param;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.InputHandler;
 import com.armemius.lab5.io.OutputHandler;
 import com.armemius.lab5.tasks.InputTask;
 
+@Parametrized(
+        params = {
+                @Param(letter = "h", name = "help"),
+                @Param(letter = "f", name = "force")
+        }
+)
 public class ClearTask extends InputTask {
     /**
      * Action for <b>clear</b> command
      * Doesn't receive arguments
      * @param context
      */
+    @Override
     public void execute(CommandContext context) {
         OutputHandler outputHandler = context.outputHandler();
         InputHandler inputHandler = context.inputHandler();

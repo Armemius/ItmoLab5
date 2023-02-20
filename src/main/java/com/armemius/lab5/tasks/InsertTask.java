@@ -3,10 +3,18 @@ package com.armemius.lab5.tasks;
 import com.armemius.lab5.collection.CollectionManager;
 import com.armemius.lab5.collection.data.*;
 import com.armemius.lab5.commands.CommandContext;
+import com.armemius.lab5.commands.params.Param;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.InputHandler;
 import com.armemius.lab5.io.OutputHandler;
 import com.armemius.lab5.tasks.RequestTask;
 
+@Parametrized(
+        params = {
+                @Param(letter = "h", name = "help"),
+                @Param(letter = "r", name = "random")
+        }
+)
 public class InsertTask extends RequestTask {
     /**
      * Action for <b>insert</b> command

@@ -6,6 +6,9 @@ import com.armemius.lab5.collection.data.StudyGroup;
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandArgumentException;
 import com.armemius.lab5.commands.exceptions.CommandRuntimeException;
+import com.armemius.lab5.commands.params.Conflict;
+import com.armemius.lab5.commands.params.Param;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.InputHandler;
 import com.armemius.lab5.io.OutputHandler;
 import com.armemius.lab5.tasks.RequestTask;
@@ -13,6 +16,21 @@ import com.armemius.lab5.tasks.RequestTask;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+@Parametrized(
+        params = {
+                @Param(letter = "h", name = "help"),
+                @Param(letter = "l", name = "lower"),
+                @Param(letter = "g", name = "greater"),
+                @Param(letter = "s", name = "students"),
+                @Param(letter = "e", name = "expelled"),
+                @Param(letter = "a", name = "avg-mark"),
+                @Param(letter = "d", name = "admin")
+        },
+        incompatible = {
+                @Conflict({"l", "g"}),
+                @Conflict({"s", "e", "a", "d"})
+        }
+)
 public class RemoveTask extends RequestTask {
     /**
      * Action for <b>remove</b> command

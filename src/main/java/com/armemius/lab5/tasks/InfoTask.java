@@ -2,11 +2,14 @@ package com.armemius.lab5.tasks;
 
 import com.armemius.lab5.collection.CollectionManager;
 import com.armemius.lab5.commands.CommandContext;
+import com.armemius.lab5.commands.params.Param;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.OutputHandler;
 import com.armemius.lab5.tasks.Task;
 
 import java.time.format.DateTimeFormatter;
 
+@Parametrized
 public class InfoTask implements Task {
     /**
      * Action for <b>info</b> command

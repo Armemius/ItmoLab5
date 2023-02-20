@@ -50,10 +50,13 @@ public class ConsoleManager {
             return;
         ConsoleManager.parser = parser;
         isRunning = true;
-        while (isRunning) {
-            outputHandler.hold("$ ");
+        outputHandler.put("Console manager initialized!\n\rType 'help' for information about commands");
+        outputHandler.hold("$ ");
+        while (isRunning && inputHandler.hasNextLine()) {
             ConsoleManager.parser.parse(inputHandler.get());
+            outputHandler.hold("$ ");
         }
+        isRunning = false;
     }
 
     /**

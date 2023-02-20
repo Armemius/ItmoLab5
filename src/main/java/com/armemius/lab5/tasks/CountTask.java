@@ -4,15 +4,18 @@ import com.armemius.lab5.collection.CollectionManager;
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandArgumentException;
 import com.armemius.lab5.commands.exceptions.CommandRuntimeException;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.InputHandler;
 import com.armemius.lab5.io.OutputHandler;
 
+@Parametrized
 public class CountTask implements Task {
     /**
      * Action for <b>count</b> command
      * Receives one or two arguments
      * @param context
      */
+    @Override
     public void execute(CommandContext context) {
         OutputHandler outputHandler = context.outputHandler();
         InputHandler inputHandler = context.inputHandler();

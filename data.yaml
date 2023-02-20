@@ -1,484 +1,316 @@
 ---
 1:
   id: 1
-  name: "GROUP_NAME271"
+  name: "GROUP_NAME72"
   coordinates:
-    x: 84679
-    "y": 4699
-  creationDate: "2023-02-09T17:34:53.7522933Z"
-  studentsCount: 12
-  expelledStudents: 1
-  averageMark: 2.7814290174288407
+    x: 79811
+    "y": 5346
+  creationDate: "2023-02-21T02:25:23.9780717+03:00"
+  studentsCount: 24
+  expelledStudents: 4
+  averageMark: 2.3637025947429224
   semesterEnum: "SECOND"
   groupAdmin:
-    name: "ADMIN_NAME233"
-    height: 185.14755
-    eyeColor: "WHITE"
-    hairColor: "ORANGE"
+    name: "ADMIN_NAME487"
+    height: 159.09807
+    eyeColor: "YELLOW"
+    hairColor: "RED"
     nationality: "VATICAN"
     location:
-      x: 19999
-      "y": 48725.641527825224
-      z: 188158
+      x: 11363
+      "y": -4630.978115551656
+      z: -4569
 2:
   id: 2
-  name: "GROUP_NAME580"
+  name: "GROUP_NAME866"
   coordinates:
-    x: 47541
-    "y": 6533
-  creationDate: "2023-02-09T17:34:57.7662005Z"
-  studentsCount: 23
-  expelledStudents: 5
-  averageMark: 2.087854472786198
+    x: 63510
+    "y": 6172
+  creationDate: "2023-02-21T02:25:23.9780717+03:00"
+  studentsCount: 29
+  expelledStudents: 4
+  averageMark: 4.285636562097509
   semesterEnum: "EIGHTH"
   groupAdmin:
-    name: "ADMIN_NAME974"
-    height: 150.42809
-    eyeColor: "GREEN"
-    hairColor: "GREEN"
-    nationality: "UNITED_KINGDOM"
+    name: "ADMIN_NAME881"
+    height: 191.74489
+    eyeColor: "WHITE"
+    hairColor: "BLACK"
+    nationality: "VATICAN"
     location:
-      x: 66896
-      "y": 173600.42562253887
-      z: 27249
+      x: 38800
+      "y": 40504.63231176521
+      z: 176340
 3:
   id: 3
-  name: "GROUP_NAME156"
+  name: "GROUP_NAME658"
   coordinates:
-    x: -85347
-    "y": 381
-  creationDate: "2023-02-09T17:35:00.7834614Z"
-  studentsCount: 14
-  expelledStudents: 4
-  averageMark: 3.9339612325950717
+    x: 73941
+    "y": 8594
+  creationDate: "2023-02-21T02:25:23.9780717+03:00"
+  studentsCount: 29
+  expelledStudents: 2
+  averageMark: 4.462549517171356
   semesterEnum: "SECOND"
   groupAdmin:
-    name: "ADMIN_NAME416"
-    height: 156.68549
-    eyeColor: "WHITE"
+    name: "ADMIN_NAME298"
+    height: 199.33707
+    eyeColor: "YELLOW"
     hairColor: "RED"
-    nationality: "UNITED_KINGDOM"
+    nationality: "SOUTH_KOREA"
     location:
-      x: 77351
-      "y": 177396.18667647106
-      z: 183628
+      x: 89204
+      "y": 134736.43312015766
+      z: 37384
 4:
   id: 4
-  name: "GROUP_NAME966"
+  name: "GROUP_NAME250"
   coordinates:
-    x: 73256
-    "y": 5355
-  creationDate: "2023-02-09T17:35:03.8129201Z"
-  studentsCount: 14
-  expelledStudents: 5
-  averageMark: 3.0135236886833034
+    x: 79623
+    "y": 2243
+  creationDate: "2023-02-21T02:25:23.9780717+03:00"
+  studentsCount: 27
+  expelledStudents: 3
+  averageMark: 3.430856851562034
+  semesterEnum: "SEVENTH"
+  groupAdmin:
+    name: "ADMIN_NAME668"
+    height: 191.34576
+    eyeColor: "WHITE"
+    hairColor: "BLACK"
+    nationality: "UNITED_KINGDOM"
+    location:
+      x: 126877
+      "y": -3790.6641404614656
+      z: 56697
+5:
+  id: 5
+  name: "GROUP_NAME437"
+  coordinates:
+    x: -28953
+    "y": 7198
+  creationDate: "2023-02-21T02:25:23.9780717+03:00"
+  studentsCount: 11
+  expelledStudents: 1
+  averageMark: 4.5509415700215
   semesterEnum: null
   groupAdmin:
-    name: "ADMIN_NAME8"
-    height: 186.61745
+    name: "ADMIN_NAME975"
+    height: 165.11044
+    eyeColor: "GREEN"
+    hairColor: "RED"
+    nationality: "SOUTH_KOREA"
+    location:
+      x: 51944
+      "y": 109406.2500634808
+      z: 104788
+6:
+  id: 6
+  name: "GROUP_NAME907"
+  coordinates:
+    x: -2994
+    "y": 2830
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 13
+  expelledStudents: 4
+  averageMark: 3.6101030316432476
+  semesterEnum: "SEVENTH"
+  groupAdmin:
+    name: "ADMIN_NAME877"
+    height: 181.66434
+    eyeColor: "YELLOW"
+    hairColor: "ORANGE"
+    nationality: "CHINA"
+    location:
+      x: 169715
+      "y": 26170.35579817345
+      z: 133612
+7:
+  id: 7
+  name: "GROUP_NAME99"
+  coordinates:
+    x: 42590
+    "y": 4245
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 25
+  expelledStudents: 3
+  averageMark: 3.9744872817096817
+  semesterEnum: null
+  groupAdmin:
+    name: "ADMIN_NAME638"
+    height: 162.36748
+    eyeColor: "GREEN"
+    hairColor: "GREEN"
+    nationality: "SOUTH_KOREA"
+    location:
+      x: 23744
+      "y": 19016.990169789315
+      z: 84984
+8:
+  id: 8
+  name: "GROUP_NAME322"
+  coordinates:
+    x: -20664
+    "y": 4181
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 10
+  expelledStudents: 1
+  averageMark: 2.0575857046300556
+  semesterEnum: null
+  groupAdmin:
+    name: "ADMIN_NAME869"
+    height: 170.59245
+    eyeColor: "YELLOW"
+    hairColor: "BLACK"
+    nationality: "UNITED_KINGDOM"
+    location:
+      x: 26932
+      "y": 118865.32196517146
+      z: 33525
+9:
+  id: 9
+  name: "GROUP_NAME693"
+  coordinates:
+    x: 92099
+    "y": 5452
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 10
+  expelledStudents: 2
+  averageMark: 3.8714267360217005
+  semesterEnum: "SEVENTH"
+  groupAdmin:
+    name: "ADMIN_NAME142"
+    height: 154.55975
+    eyeColor: "GREEN"
+    hairColor: "WHITE"
+    nationality: "CHINA"
+    location:
+      x: 79775
+      "y": 125319.15171643844
+      z: 85761
+10:
+  id: 10
+  name: "GROUP_NAME668"
+  coordinates:
+    x: -10269
+    "y": 8028
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 19
+  expelledStudents: 1
+  averageMark: 2.145468311410519
+  semesterEnum: "SECOND"
+  groupAdmin:
+    name: "ADMIN_NAME141"
+    height: 192.84982
     eyeColor: "GREEN"
     hairColor: "RED"
     nationality: "CHINA"
     location:
-      x: 86456
-      "y": 78692.02313657307
-      z: 97288
-5:
-  id: 5
-  name: "GROUP_NAME573"
-  coordinates:
-    x: -71045
-    "y": 4828
-  creationDate: "2023-02-09T20:45:09.534481+03:00"
-  studentsCount: 15
-  expelledStudents: 3
-  averageMark: 2.997381977684027
-  semesterEnum: "EIGHTH"
-  groupAdmin:
-    name: "ADMIN_NAME124"
-    height: 155.94911
-    eyeColor: "GREEN"
-    hairColor: "WHITE"
-    nationality: "UNITED_KINGDOM"
-    location:
-      x: 29246
-      "y": 184949.41228002173
-      z: 37855
-6:
-  id: 6
-  name: "GROUP_NAME616"
-  coordinates:
-    x: 58014
-    "y": 6132
-  creationDate: "2023-02-09T20:45:09.534481+03:00"
-  studentsCount: 11
-  expelledStudents: 4
-  averageMark: 3.9673754702047157
-  semesterEnum: null
-  groupAdmin:
-    name: "ADMIN_NAME989"
-    height: 193.36452
-    eyeColor: "WHITE"
-    hairColor: "GREEN"
-    nationality: "SOUTH_KOREA"
-    location:
-      x: 185468
-      "y": 176644.92454462405
-      z: 83802
-7:
-  id: 7
-  name: "GROUP_NAME82"
-  coordinates:
-    x: 91966
-    "y": 263
-  creationDate: "2023-02-09T20:45:09.534481+03:00"
-  studentsCount: 19
-  expelledStudents: 2
-  averageMark: 2.3810822964097658
-  semesterEnum: null
-  groupAdmin:
-    name: "ADMIN_NAME967"
-    height: 183.79283
-    eyeColor: "GREEN"
-    hairColor: "GREEN"
-    nationality: "CHINA"
-    location:
-      x: 68902
-      "y": 145319.18898045697
-      z: 22042
-8:
-  id: 8
-  name: "GROUP_NAME961"
-  coordinates:
-    x: 20112
-    "y": 8919
-  creationDate: "2023-02-09T20:45:09.534481+03:00"
-  studentsCount: 24
-  expelledStudents: 2
-  averageMark: 2.206423290191762
-  semesterEnum: "EIGHTH"
-  groupAdmin:
-    name: "ADMIN_NAME59"
-    height: 163.3681
-    eyeColor: "YELLOW"
-    hairColor: "ORANGE"
-    nationality: "CHINA"
-    location:
-      x: 110148
-      "y": 117805.36516957713
-      z: 167692
-9:
-  id: 9
-  name: "GROUP_NAME183"
-  coordinates:
-    x: 21247
-    "y": 5694
-  creationDate: "2023-02-09T20:45:09.534481+03:00"
-  studentsCount: 20
-  expelledStudents: 4
-  averageMark: 3.3619050602232643
-  semesterEnum: null
-  groupAdmin:
-    name: "ADMIN_NAME97"
-    height: 179.54068
-    eyeColor: "WHITE"
-    hairColor: "ORANGE"
-    nationality: "UNITED_KINGDOM"
-    location:
-      x: 90883
-      "y": 39935.60219564605
-      z: 82885
-10:
-  id: 10
-  name: "GROUP_NAME29"
-  coordinates:
-    x: -34646
-    "y": 4019
-  creationDate: "2023-02-09T20:45:09.5354789+03:00"
-  studentsCount: 18
-  expelledStudents: 5
-  averageMark: 2.321019295877055
-  semesterEnum: "SECOND"
-  groupAdmin:
-    name: "ADMIN_NAME477"
-    height: 188.8611
-    eyeColor: "WHITE"
-    hairColor: "WHITE"
-    nationality: "VATICAN"
-    location:
-      x: 18214
-      "y": 29747.659596199017
-      z: 7720
+      x: 181193
+      "y": 53336.57813421936
+      z: 144175
 11:
   id: 11
-  name: "GROUP_NAME538"
+  name: "GROUP_NAME346"
   coordinates:
-    x: -19553
-    "y": 2502
-  creationDate: "2023-02-09T20:45:09.5354789+03:00"
-  studentsCount: 13
-  expelledStudents: 2
-  averageMark: 3.8000125643503515
+    x: 60145
+    "y": 8313
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 17
+  expelledStudents: 4
+  averageMark: 2.6146472232729927
   semesterEnum: "THIRD"
   groupAdmin:
-    name: "ADMIN_NAME7"
-    height: 172.63376
+    name: "ADMIN_NAME267"
+    height: 182.41849
     eyeColor: "GREEN"
-    hairColor: "WHITE"
-    nationality: "UNITED_KINGDOM"
+    hairColor: "BLACK"
+    nationality: "VATICAN"
     location:
-      x: 47326
-      "y": 151073.68779863417
-      z: 181794
+      x: 144779
+      "y": 175886.10805064312
+      z: 108170
 12:
   id: 12
-  name: "GROUP_NAME378"
+  name: "GROUP_NAME317"
   coordinates:
-    x: 27286
-    "y": 4066
-  creationDate: "2023-02-09T20:45:09.5354789+03:00"
-  studentsCount: 19
+    x: 90886
+    "y": 1235
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 24
   expelledStudents: 5
-  averageMark: 2.9167085407700357
-  semesterEnum: "THIRD"
+  averageMark: 4.63451285919202
+  semesterEnum: "SECOND"
   groupAdmin:
-    name: "ADMIN_NAME662"
-    height: 181.66548
-    eyeColor: "GREEN"
-    hairColor: "BLACK"
-    nationality: "UNITED_KINGDOM"
+    name: "ADMIN_NAME664"
+    height: 173.92691
+    eyeColor: "YELLOW"
+    hairColor: "WHITE"
+    nationality: "VATICAN"
     location:
-      x: 150121
-      "y": 74374.0268705465
-      z: 146626
+      x: 13305
+      "y": 21303.348595548487
+      z: 48577
 13:
   id: 13
-  name: "GROUP_NAME358"
+  name: "GROUP_NAME195"
   coordinates:
-    x: 78223
-    "y": 9730
-  creationDate: "2023-02-09T20:45:09.5354789+03:00"
-  studentsCount: 28
-  expelledStudents: 3
-  averageMark: 2.5269009754704412
-  semesterEnum: "THIRD"
+    x: 40425
+    "y": 7403
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 24
+  expelledStudents: 4
+  averageMark: 4.338587776412232
+  semesterEnum: "SEVENTH"
   groupAdmin:
-    name: "ADMIN_NAME452"
-    height: 195.87538
-    eyeColor: "WHITE"
+    name: "ADMIN_NAME495"
+    height: 150.9395
+    eyeColor: "GREEN"
     hairColor: "ORANGE"
-    nationality: "UNITED_KINGDOM"
+    nationality: "CHINA"
     location:
-      x: 137840
-      "y": -2287.265489263159
-      z: 68374
+      x: 66251
+      "y": 105474.47973698011
+      z: 123826
 14:
   id: 14
-  name: "GROUP_NAME687"
+  name: "GROUP_NAME629"
   coordinates:
-    x: -53139
-    "y": 4818
-  creationDate: "2023-02-09T20:45:09.5354789+03:00"
-  studentsCount: 22
-  expelledStudents: 2
-  averageMark: 3.916623550400427
-  semesterEnum: "SEVENTH"
-  groupAdmin:
-    name: "ADMIN_NAME108"
-    height: 171.35971
-    eyeColor: "WHITE"
-    hairColor: "ORANGE"
-    nationality: "VATICAN"
-    location:
-      x: 145811
-      "y": 67344.49600538664
-      z: 55479
-15:
-  id: 15
-  name: "GROUP_NAME226"
-  coordinates:
-    x: -82377
-    "y": 7050
-  creationDate: "2023-02-09T20:45:09.5354789+03:00"
-  studentsCount: 22
-  expelledStudents: 2
-  averageMark: 2.254186965105659
-  semesterEnum: "EIGHTH"
-  groupAdmin:
-    name: "ADMIN_NAME13"
-    height: 175.96819
-    eyeColor: "WHITE"
-    hairColor: "GREEN"
-    nationality: "SOUTH_KOREA"
-    location:
-      x: 83169
-      "y": 93788.119254368
-      z: 36030
-16:
-  id: 16
-  name: "GROUP_NAME737"
-  coordinates:
-    x: 63024
-    "y": 8378
-  creationDate: "2023-02-09T20:45:09.5364787+03:00"
-  studentsCount: 14
-  expelledStudents: 2
-  averageMark: 2.126079530317128
-  semesterEnum: null
-  groupAdmin:
-    name: "ADMIN_NAME987"
-    height: 158.86438
-    eyeColor: "YELLOW"
-    hairColor: "BLACK"
-    nationality: "CHINA"
-    location:
-      x: 117031
-      "y": 45773.46743963565
-      z: 131301
-17:
-  id: 17
-  name: "GROUP_NAME794"
-  coordinates:
-    x: 90968
-    "y": 1748
-  creationDate: "2023-02-09T20:45:09.5364787+03:00"
-  studentsCount: 25
-  expelledStudents: 1
-  averageMark: 3.993326118935342
-  semesterEnum: "EIGHTH"
-  groupAdmin:
-    name: "ADMIN_NAME983"
-    height: 188.48532
-    eyeColor: "WHITE"
-    hairColor: "ORANGE"
-    nationality: "UNITED_KINGDOM"
-    location:
-      x: 70897
-      "y": 1723.769461726286
-      z: 69184
-18:
-  id: 18
-  name: "GROUP_NAME820"
-  coordinates:
-    x: -71753
-    "y": 890
-  creationDate: "2023-02-09T20:45:09.5364787+03:00"
-  studentsCount: 25
-  expelledStudents: 1
-  averageMark: 4.798010288911114
-  semesterEnum: "SEVENTH"
-  groupAdmin:
-    name: "ADMIN_NAME566"
-    height: 190.24968
-    eyeColor: "WHITE"
-    hairColor: "ORANGE"
-    nationality: "CHINA"
-    location:
-      x: 104100
-      "y": 153467.61420971746
-      z: 61181
-19:
-  id: 19
-  name: "GROUP_NAME235"
-  coordinates:
-    x: -49155
-    "y": 8527
-  creationDate: "2023-02-09T20:45:09.5364787+03:00"
-  studentsCount: 17
-  expelledStudents: 5
-  averageMark: 3.7897095618467582
-  semesterEnum: null
-  groupAdmin:
-    name: "ADMIN_NAME505"
-    height: 163.0415
-    eyeColor: "GREEN"
-    hairColor: "BLACK"
-    nationality: "VATICAN"
-    location:
-      x: 103172
-      "y": -8733.18592882021
-      z: 89535
-20:
-  id: 20
-  name: "GROUP_NAME350"
-  coordinates:
-    x: -67798
-    "y": 2552
-  creationDate: "2023-02-09T20:45:09.5364787+03:00"
-  studentsCount: 28
-  expelledStudents: 5
-  averageMark: 4.7819106268010945
-  semesterEnum: null
-  groupAdmin:
-    name: "ADMIN_NAME501"
-    height: 154.14977
-    eyeColor: "YELLOW"
-    hairColor: "BLACK"
-    nationality: "CHINA"
-    location:
-      x: 183370
-      "y": 94338.35160969314
-      z: -9673
-21:
-  id: 21
-  name: "GROUP_NAME53"
-  coordinates:
-    x: 6895
-    "y": 4870
-  creationDate: "2023-02-09T20:45:09.5374792+03:00"
-  studentsCount: 13
-  expelledStudents: 5
-  averageMark: 3.2091467364464705
-  semesterEnum: "SEVENTH"
-  groupAdmin:
-    name: "ADMIN_NAME737"
-    height: 167.97424
-    eyeColor: "WHITE"
-    hairColor: "ORANGE"
-    nationality: "UNITED_KINGDOM"
-    location:
-      x: 14901
-      "y": 23186.474079881045
-      z: 34341
-22:
-  id: 22
-  name: "GROUP_NAME405"
-  coordinates:
-    x: 20443
-    "y": 6615
-  creationDate: "2023-02-09T20:45:09.5374792+03:00"
-  studentsCount: 17
-  expelledStudents: 2
-  averageMark: 3.2545478143761737
+    x: 7916
+    "y": 617
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 19
+  expelledStudents: 3
+  averageMark: 2.339625001710575
   semesterEnum: "THIRD"
   groupAdmin:
-    name: "ADMIN_NAME920"
-    height: 155.46848
-    eyeColor: "WHITE"
-    hairColor: "BLACK"
-    nationality: "UNITED_KINGDOM"
+    name: "ADMIN_NAME304"
+    height: 168.16481
+    eyeColor: "YELLOW"
+    hairColor: "ORANGE"
+    nationality: "VATICAN"
     location:
-      x: 47446
-      "y": 58028.57807376157
-      z: 59903
-23:
-  id: 23
-  name: "GROUP_NAME649"
+      x: 48945
+      "y": 131745.1635901164
+      z: 163715
+15:
+  id: 15
+  name: "GROUP_NAME876"
   coordinates:
-    x: 82207
-    "y": -103
-  creationDate: "2023-02-09T20:45:09.5374792+03:00"
-  studentsCount: 10
-  expelledStudents: 5
-  averageMark: 4.614455366292399
-  semesterEnum: null
+    x: -54971
+    "y": 8728
+  creationDate: "2023-02-21T02:25:23.9790373+03:00"
+  studentsCount: 26
+  expelledStudents: 1
+  averageMark: 4.984098237331574
+  semesterEnum: "THIRD"
   groupAdmin:
-    name: "ADMIN_NAME171"
-    height: 153.54114
+    name: "ADMIN_NAME0"
+    height: 169.71313
     eyeColor: "GREEN"
-    hairColor: "BLACK"
-    nationality: "UNITED_KINGDOM"
+    hairColor: "GREEN"
+    nationality: "VATICAN"
     location:
-      x: 184165
-      "y": 113001.90638214767
-      z: 80589
+      x: 141199
+      "y": 44422.672753868894
+      z: 77735

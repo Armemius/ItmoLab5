@@ -4,16 +4,18 @@ import com.armemius.lab5.collection.CollectionManager;
 import com.armemius.lab5.collection.data.StudyGroup;
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandRuntimeException;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.InputHandler;
 import com.armemius.lab5.io.OutputHandler;
-import com.armemius.lab5.tasks.RequestTask;
 
+@Parametrized
 public class UpdateTask extends RequestTask {
     /**
      * Action for <b>update</b> command
      * Receives one argument
      * @param context
      */
+    @Override
     public void execute(CommandContext context) {
         OutputHandler outputHandler = context.outputHandler();
         InputHandler inputHandler = context.inputHandler();

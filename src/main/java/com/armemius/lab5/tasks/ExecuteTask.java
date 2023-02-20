@@ -2,6 +2,7 @@ package com.armemius.lab5.tasks;
 
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandArgumentException;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.OutputHandler;
 import com.armemius.lab5.tasks.Task;
 
@@ -13,12 +14,14 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Parametrized
 public class ExecuteTask implements Task {
     /**
      * Action for <b>execute</b> command
      * Receives one argument
      * @param context
      */
+    @Override
     public void execute(CommandContext context) {
         OutputHandler outputHandler = context.outputHandler();
         if (context.params().contains("h")) {

@@ -4,9 +4,10 @@ import com.armemius.lab5.collection.CollectionManager;
 import com.armemius.lab5.commands.CommandContext;
 import com.armemius.lab5.commands.exceptions.CommandArgumentException;
 import com.armemius.lab5.commands.exceptions.CommandRuntimeException;
-import com.armemius.lab5.io.InputHandler;
+import com.armemius.lab5.commands.params.Parametrized;
 import com.armemius.lab5.io.OutputHandler;
 
+@Parametrized
 public class FillTask extends InsertTask {
     /**
      * Action for <b>fill</b> command
